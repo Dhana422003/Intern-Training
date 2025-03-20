@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            text-align:left;
+            color:blue;
+        }
+        #sample{
+            text-align:left;
+            color:red;
+        }
+        .center{
+            text-align:left;
+            color:aqua;
+        }
+        .box{
+            background-color:aquamarine;
+            width:270px;
+            border:20px solid red;
+            margin:20px;
+            padding:50px;
+        }
+        .container1{
+            border:20px solid green;
+            margin:0;
+            padding:20px 25px 20px 25px;
+            box-sizing:content-box; 
+        }
+        .container2{
+            border:20px solid green;
+            margin:0;
+            padding:20px 25px 20px 25px;
+            box-sizing:content-box; 
+        }
+        .container3{
+            border:20px solid green;
+            margin:0;
+            padding:20px 25px 20px 25px;
+            box-sizing:content-box; 
+        }
+        .static{
+           background-color: green;
+           height:100px;
+           width:100px;
+           margin:5px;
+           position: static;
+        }
+        .relative{
+           background-color: yellow;
+           height:100px;
+           width:100px;
+           margin:5px;
+           position: relative;
+           left:50px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>CSS Selector</h1>
+    <h2>Element Selector</h2>
+    <h3>Hello World!!</h3>
+    <h2>ID Selector</h2>
+    <h3 id="sample"> Hello World!!</h3>
+    <h2>Class Selector</h2>
+    <h3 class="center">Hello World!!</h3>
+    <h1>CSS Box Model</h1>
+    <div class="box">CSS stands for Cascading Style Sheets. There are three types of CSS : <br> Inline CSS <br> Internal CSS <br> External CSS
+    </div>
+    <h2 class="container1">Inline CSS</h2>
+    <h2 class="container2">Internal CSS</h2>
+    <h2 class="container3">External CSS</h2>
+    <div class="static"></div>
+    <div class="relative"></div>
+   
+</body>
+</html>
