@@ -8,62 +8,116 @@
     <style>
         body {
             background-image: url(https://i.ytimg.com/vi/DRE71mxrzro/maxresdefault.jpg); 
-            background-size: cover; 
+            background-size:cover; 
             background-position: center; 
             background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0; 
+            padding: 0;
             font-family: Arial, sans-serif;
-            color: white;
+            color: black;
             text-align: center;
             padding: 20px;
         }
-
-        h1 {
-            font-size: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-shadow: 3px 3px 5px black;
-            border-bottom: 5px solid white;
-            display: inline-block;
-            padding-bottom: 5px;
+        .grid-container {
+           display: grid;
+           grid-template-columns: repeat(4,300px);
+           grid-template-rows: 300px 300px;
+           align-items: center;
+           justify-items: center;
+           place-items: center center;
         }
-
-        ul {
-            list-style-type: none;
-            padding: 20px;
-        }
-
-        li {
-            font-size: 23px;
-            font-weight: bold;
-            background-color: darkgray;
-            padding: 15px;
-            margin: 15px auto;
-            width: 80%;
+        .card {
+            padding: 30px;
+            width:150px;
+            height:150px;
             border-radius: 10px;
-            text-shadow: 3px 3px 5px black;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            place-items: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-
-        @media (max-width:477px){
-            h1 {
-    font-size: 25px;
-    font-weight: bold;
-    text-transform: lowercase;
-    text-shadow: 3px 3px 5px black;
-    border-bottom: 5px solid white;
-    display: block;
-    padding-bottom: 5px;
+        .card p{
+            margin-top: -5px;
+            font-size: 15px;
+        }
+        .card h2{
+            font-size: 18px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .card:nth-child(1) { background:aqua; }
+        .card:nth-child(2) { background: aqua; }
+        .card:nth-child(3) { background: aqua; }
+        .card:nth-child(4) {background:aqua;}
+        .card:nth-child(5) {background:aqua;}
+        .card:nth-child(6) {background:aqua;}
+        .card:nth-child(7) {background:aqua;}
+        .card:nth-child(8) {background:aqua;}
+@media(max-width:768px){
+.grid-container{
+    grid-template-columns: repeat(2,300px);
+    grid-template-rows: repeat(4,300px);
 }
-        }
+body{
+    padding: 0px;
+}
+}
+@media(max-width:440px){
+    .grid-container{
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(8,300px);
+    }
+    body{
+        padding-left: 5px;
+    }
+}
+        
+       
     </style>
 </head>
 <body>
-    <h1>Introduction to HTML</h1>
-    <ul>
-        <li>HTML stands for <span style="color: yellow;">Hypertext Markup Language</span></li>
-        <li>It is a combination of both <span style="color: cyan;">hypertext</span> and <span style="color: lime;">markup language</span></li>
-        <li>It contains elements that can <span style="color: orange;">change the web page’s look</span> and display contents</li>
-        <li>It was created by <span style="color:lawngreen">Tim Berners-Lee</span> in 1991</li>
-        <li>The first version of HTML was <span style="color: pink;">HTML 2.0</span> (1999), and the latest version is <span style="color:mediumvioletred">HTML 5</span></li>
-    </ul>
+    <div class="grid-container">
+        <div class="card">
+            <h2>HTML</h2>
+            <p>HTML (HyperText Markup Language) is the standard language for creating web pages. 
+                It structures content using elements like headings, paragraphs, and links.</p>
+        </div>
+        <div class="card"><h2>CSS</h2>
+        <p>is a styling language used to control the appearance and layout of web pages. 
+            It allows you to define how HTML elements should be displayed, including colors and fonts.</p></div>
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>JavaScript is a powerful, high-level, and dynamic programming language 
+                used to create interactive and dynamic content on websites.</p>
+        </div>
+        <div class="card"><h2>Tailwind</h2>
+        <p>  It is a utility-first framework that allows developers to build modern and responsive user interfaces quickly. </p></div>
+        <div class="card"><h2>TypeScript</h2>
+        <p>TypeScript is a strongly typed, object-oriented programming language that extends JavaScript by adding static types. 
+            It was developed by Microsoft.</p></div>
+        <div class="card">
+            <h2>Bootstrap</h2>
+            <p>Bootstrap is a popular open-source front-end framework used for developing responsive and mobile-first websites.
+                 It was originally developed by Twitter. </p>
+        </div>
+        <div class="card">
+            <h2>React</h2>
+            <p>React is a popular JavaScript library developed by Facebook for building fast and interactive user interfaces.
+                 It is component-based, allowing developers to create reusable UI elements.</p>
+        </div>
+        <div class="card"><h2>Node</h2>
+        <p>Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to run JavaScript outside the browser. </p></div>
+        
+    </div> 
+   <!--  <div class="grid-container1">
+       
+    </div> -->
 </body>
 </html>
