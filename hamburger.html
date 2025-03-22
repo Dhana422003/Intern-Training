@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+
+        
+        }
+        nav {
+            background-color: bisque;
+            font-size: 28px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: blue;
+            padding: 10px 20px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            margin: 0 8px;
+        }
+        nav a {
+            text-decoration: none;
+            color: blue;
+            margin-left: 10px;
+        }
+        .logo {
+            font-size: 36px;
+            font-weight: bolder;
+            margin:10px;
+        }
+        nav a:hover {
+            color: aliceblue;
+        }
+        .menu-line {
+            height: 3px;
+            width: 25px;
+            background-color: blue;
+            margin: 5px 0;
+        }
+        .menu {
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+        }
+        .showmenu {
+            display: block !important;
+        }
+        
+        @media all and (max-width: 640px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: bisque;
+                padding: 0;
+            }
+            nav li {
+                padding: 10px 0;
+            }
+            .logo {
+                align-self: flex-start;
+                margin: 10px 0px 0px 30px;
+            }
+            .menu {
+                display: flex;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+        }
+        .grid-container {
+           display: grid;
+           grid-template-columns: repeat(4,300px);
+           grid-template-rows: 300px 300px;
+           align-items: center;
+           justify-items: center;
+           place-items: center center;
+        }
+        .card {
+            padding: 30px;
+            width:150px;
+            height:150px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            place-items: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card p{
+            margin-top: -5px;
+            font-size: 15px;
+        }
+        .card h2{
+            font-size: 18px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .card:nth-child(1) { background:aqua; }
+        .card:nth-child(2) { background: aqua; }
+        .card:nth-child(3) { background: aqua; }
+        .card:nth-child(4) {background:aqua;}
+        .card:nth-child(5) {background:aqua;}
+        .card:nth-child(6) {background:aqua;}
+        .card:nth-child(7) {background:aqua;}
+        .card:nth-child(8) {background:aqua;}
+
+        @media(max-width:768px){
+.grid-container{
+    grid-template-columns: repeat(2,300px);
+    grid-template-rows: repeat(4,300px);
+}
+body{
+    padding: 0px;
+}
+}
+@media(max-width:440px){
+    .grid-container{
+        grid-template-columns: 600px;
+        grid-template-rows: repeat(8,600px);
+    }
+    body{
+        padding-left: 5px;
+    }
+}
+ 
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">HTML</a>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+
+    <div class="grid-container">
+        <div class="card">
+            <h2>HTML</h2>
+           
+        </div>
+        <div class="card"><h2>CSS</h2>
+       </div>
+        <div class="card">
+            <h2>JavaScript</h2>
+            
+        </div>
+        <div class="card"><h2>Tailwind</h2>
+        </div>
+        <div class="card"><h2>TypeScript</h2>
+        </div>
+        <div class="card">
+            <h2>Bootstrap</h2>
+            
+        </div>
+        <div class="card">
+            <h2>React</h2>
+            
+        </div>
+        <div class="card"><h2>Node</h2>
+        </div>
+        
+    </div> 
+
+    <script>
+        const menu = document.querySelector('.menu');
+        const menuList = document.querySelector('nav ul');
+
+        menu.addEventListener('click', () => {
+            menuList.classList.toggle('showmenu');
+        });
+    </script>
+</body>
+</html>
